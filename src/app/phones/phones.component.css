@@ -1,0 +1,64 @@
+*{
+    font-family: 'gotham';
+    font-size: 12px;
+  }
+section{
+    width: 60%;
+    margin: auto;
+}
+
+.product{
+    transition: all ease .5s;
+    cursor: pointer;
+    margin-bottom: 10%;
+}
+.product:hover{
+transform: scale(1.1);
+box-shadow: 10px 10px 80px 1px #cecdcd;
+}
+
+.circle_color{
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    margin: 3%;
+    background-color: rgb(208, 10, 10);
+    -webkit-box-shadow: 5px 10px 22px -2px rgba(0,0,0,0.18); 
+    box-shadow: 5px 10px 22px -2px rgba(0,0,0,0.18);
+}
+
+.product h4{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+.product h5{
+    font-size: 1.3em;
+    text-align: right;
+}
+
+.control{
+    width:60%;
+    text-align: center;
+    margin: 5% auto;
+}
+
+@media (max-width: 768px) {
+  
+    section{
+        width: 80%;
+        padding: 5%;
+ 
+    }
+    
+  }
+
+  @media (max-width: 600px) {
+  
+    section{
+        width: 90%;
+        padding: 10%;
+        
+ 
+    }
+    
+  }

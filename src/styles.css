@@ -1,0 +1,28 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
+    font-family: 'Gotham';
+
+}
+
+footer{
+    width: 25%;
+    margin: auto;
+    padding: 1%;
+    text-align: center;
+    border-top: 1px solid;
+}
+.ngx-pagination .current{
+    border-radius: 100%!important;
+
+}
+@media (max-width: 768px) {
+  
+    footer{
+        width: 50%;
+    }
+  }
