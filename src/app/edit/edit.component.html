@@ -1,0 +1,67 @@
+<section  *ngIf="phone" class="container" >
+  <h1 class="title">Edit Phone</h1>
+
+  <form  *ngIf="formulario"
+  method="POST"
+  enctype="multipart/form-data"
+  [formGroup]="formulario"
+  (ngSubmit)="onSubmit()">
+    <div class="Col-Form" >
+      <div class="input">
+        <input type="text" class="form-control" formControlName="name"   />
+      </div>
+
+      <div class="input">
+        <input type="text" class="form-control" formControlName="manufacturer"   />
+        <span class="label">{{phone.manufacturer}}</span>
+        <span class="label-sm">{{phone.manufacturer}}</span>
+      </div>
+
+      <div class="input">
+        <input type="text" class="form-control" formControlName="description" />
+        <span class="label">{{phone.description}}</span>
+        <span class="label-sm">{{phone.description}}</span>
+      </div>
+    </div>
+    <div class="Col-Form">
+      <div class="input">
+        <input type="text" class="form-control" formControlName="color"  />
+        <span class="label">{{phone.color}}</span>
+        <span class="label-sm">{{phone.color}}</span>
+      </div>
+
+      <div class="input">
+        <input type="text" class="form-control" formControlName="screen"    />
+        <span class="label">{{phone.screen}}</span>
+        <span class="label-sm">{{phone.screen}}</span>
+      </div>
+
+      <div class="input">
+        <input type="text" class="form-control" formControlName="processor"  />
+        <span class="label">{{phone.processor}}</span>
+        <span class="label-sm">{{phone.processor}}</span>
+      </div>
+
+    </div>
+    <div class="Col-Form">
+      <div class="input">
+        <input type="number" class="form-control" formControlName="ram"  />
+        <span class="label">{{phone.ram}}</span>
+        <span class="label-sm">{{phone.ram}}</span>
+      </div>
+
+      <div class="input">
+        <input type="number" min="1" step="any" class="form-control" formControlName="price" />
+        <span class="label">{{phone.price}}</span>
+        <span class="label-sm">{{phone.price}}</span>
+      </div>
+
+      <div class="input">
+        <input type="file" accept="image/jpeg && png" class="form-control" formControlName="imageFile" />
+        <span class="label">Image</span>
+        <span class="label-sm">Image</span>
+      </div>
+    </div>
+    <button class="slide">Edit Phone</button>
+  </form>
+</section>

@@ -1,0 +1,23 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4" *ngFor="let phone of Arrayphones | paginate: { itemsPerPage: 6, currentPage: pageActual }">
+                <div class="text-left product" (click)="goToDetails(phone)">
+                    <img class="card-img-top"
+                        src="https://thumb.pccomponentes.com/w-530-530/articles/34/348250/1127-apple-iphone-xr-128-gb-negro-libre.jpg"
+                        [alt]="phone.name" [title]="phone.name">
+                    <div class="card-body">
+                        <div class="circle_color" [title]="phone.color" [ngStyle]="{ backgroundColor: phone.color }"></div>
+                        <h4 class="card-title">{{phone.name}}</h4>
+                        <h5 class="card-text">{{phone.price}}€</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="control">
+    <pagination-controls class="paginator" (pageChange)="pageActual = $event" *ngIf="Arrayphones.length !== 7"  
+    maxSize="9">
+    </pagination-controls>
+</div>
+</section>

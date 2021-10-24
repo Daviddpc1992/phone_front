@@ -1,0 +1,96 @@
+*{
+  font-family: 'gotham';
+  font-size: 12px;
+}
+section{
+    height: auto;
+    margin: 0% 0% 10vh 0%;
+  
+  }
+  .main{
+  
+    height: auto;
+  }    
+  .imagen {
+    border-radius: 7px;
+    width: 100%;
+  
+  }
+  .detalle h1{
+    font-size: 3em!important;
+  }
+  h2{
+      font-size: 1.5em;
+  }
+  .card-body{
+    padding: 2rem !important;
+  }
+  
+.back{
+  position:absolute;
+  color: black;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  transition: all 1s;
+}
+
+.back-arrow{
+  position: relative;
+  right: 0;
+  width: 20%;
+  opacity: 0;
+  transform: translateZ(-100%);
+
+}
+.back:hover .back-arrow{
+opacity: 1;
+
+}
+
+.back:before{
+  content: "";
+  color: black;
+  text-decoration: none;
+}
+
+.back:after{
+    content: "";
+    position: relative;
+    background: rgb(252,70,107);
+    background: linear-gradient(90deg, rgba(252,70,107,1) 0%, rgba(63,94,251,1) 100%); 
+    width: 20%;
+    height: 4px;
+    opacity: 0;
+    transition: all ease .3s;
+
+    
+  }
+  .back:hover:after{
+    opacity:1;
+    width: 100%;
+    transform: translateY(8px);
+  
+   }
+   .circle{
+     width: 30px;
+     height: 30px;
+     border-radius: 100%;
+     background-color: blue;
+   }
+   .detalle{
+     padding-left: 15px;
+   }
+   .accordion-header{
+     border-bottom: 1px solid black!important;
+   }
+
+.caracteristica{
+  padding: 10px  ;
+  cursor: pointer;
+  border-bottom: 1px solid black;
+}
+.Description{
+  transition: all ease 5s;
+}

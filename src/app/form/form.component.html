@@ -1,0 +1,66 @@
+<section class="container">
+    <h1 class="title">New Phone</h1>
+
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+      <div class="Col-Form">
+      <div class="input">
+        <input type="text" class="form-control" formControlName="name"/>
+        <span class="label">Name</span>
+        <span class="label-sm">Name</span>
+      </div>
+
+      <div class="input">
+        <input type="text" class="form-control" formControlName="manufacturer"/>
+        <span class="label">Manufacturer</span>
+        <span class="label-sm">Manufacturer</span>
+      </div>
+
+      <div class="input">
+        <input type="text" class="form-control" formControlName="description"/>
+        <span class="label">Description</span>
+        <span class="label-sm">Description</span>
+      </div>
+    </div>
+    <div class="Col-Form">
+      <div class="input">
+        <input type="text" class="form-control" formControlName="color"/>
+        <span class="label">Color</span>
+        <span class="label-sm">Color</span>
+      </div>
+
+      <div class="input">
+        <input type="text" class="form-control" formControlName="screen"/>
+        <span class="label">Screen</span>
+        <span class="label-sm">Screen</span>
+      </div>
+      
+      <div class="input">
+        <input type="text" class="form-control" formControlName="processor"/>
+        <span class="label">Processor</span>
+        <span class="label-sm">Processor</span>
+      </div>
+
+    </div>
+    <div class="Col-Form">
+      <div class="input">
+        <input type="number" class="form-control" formControlName="ram"/>
+        <span class="label">Ram</span>
+        <span class="label-sm">Ram</span>
+      </div>
+
+      <div class="input">
+        <input type="number" min="1" step="any" class="form-control" formControlName="price"/>
+        <span class="label">Price</span>
+        <span class="label-sm">Price</span>
+      </div>
+    
+      <div class="input" >
+        <input type="file" accept="image/jpeg && png"  class="form-control" formControlName="imageFile"/>
+        <span class="label">Image</span>
+        <span class="label-sm">Image</span>
+      </div>
+    </div>
+    <button class="slide" >Add Phone</button>
+    </form>
+  </section>
+
