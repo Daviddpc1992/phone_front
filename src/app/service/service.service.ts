@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Phone } from '../interface/phone'
+import { PHONE } from '../db/db';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ export class ServiceService {
   baseUrl: string;
 
   constructor( private httpClient: HttpClient) {
-    this.baseUrl = 'http://localhost:5000/api';
+    this.baseUrl = 'https://phonesback.herokuapp.com';
   }
 
   getAll():Promise<Phone[]>{
@@ -28,4 +29,19 @@ export class ServiceService {
     return this.httpClient.put(`${this.baseUrl}/phone/${id}`, fd).toPromise();
   }
 
+  
+  getAlllocal(): Phone[] {
+    return PHONE;
+ }
+
+ getByItem(pItem: any): Phone[] {
+  return [...new Set(PHONE.filter((phone) => { return phone.id === pItem})
+  )]
 }
+
+  getById(pId: number): Phone{
+    return PHONE.find(proyecto => proyecto.id == pId)
+  }
+}
+
+

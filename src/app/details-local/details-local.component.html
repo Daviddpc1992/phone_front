@@ -1,0 +1,62 @@
+<section *ngIf="phone">
+    <div class="main">
+        <div class="container" >
+            <div class="row">
+                <div class="card-body">
+                    <div class="col-12 col-md-6 ">
+                        <a [routerLink]="['/']" class="back">
+                            <img class="back-arrow" src="https://img.icons8.com/ios/50/000000/long-arrow-left.png" />
+                            <h5>Back</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-10 col-md-5 ">
+                    <a [href]="phone.imageFile"
+                        data-fancybox="gallery" [data-caption]="phone.name">
+                        <img width="100%" [src]="phone.imageFile"
+                            alt="{{phone.name}}">
+                    </a>
+                </div>
+                <div class="col-md-7 col-12">
+                    <div class="detalle">
+                        <h1>{{phone.name}}</h1>
+                        <h3>{{phone.manufacturer}}</h3>
+                        <h2>{{phone.price}}€</h2>
+                        <span>
+                            <h2>Color:</h2>
+                            <div class="circle" [ngStyle]="{ backgroundColor: color() }">
+        
+                            </div>
+                        </span>
+                    </div>
+                    <div class="caracteristica" (click)="Des1=!Des1">
+                        <h3>Description</h3>
+                        <div class="Description" *ngIf="Des1 === false" >
+                            <h3>{{phone.description}}</h3>
+                        </div>
+                    </div>
+                    <div (click)="Des2=!Des2" class="caracteristica">
+                        <h3 >Screen</h3>
+                        <div class="Description" *ngIf="Des2 === true">
+                            <h3>{{phone.screen}}</h3>
+                        </div>
+                    </div>
+                    <div (click)="Des3=!Des3" class="caracteristica">
+                        <h3 >Processor</h3>
+                        <div class="Description" *ngIf="Des3 === true">
+                            <h3>{{phone.processor}}</h3>
+                        </div>
+                    </div>
+                    <div (click)="Des4=!Des4" class="caracteristica">
+                        <h3>Ram</h3>
+                        <div class="Description" *ngIf="Des4 === true">
+                            <h3>{{phone.ram}}</h3>
+                        </div>
+                    </div>
+                </div>
+                <h5 style="cursor: pointer;" (click)="goToEdit(phone)">Edit phone</h5>
+            </div>
+        </div>
+
+
+    </div>

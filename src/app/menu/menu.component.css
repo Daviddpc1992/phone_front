@@ -51,10 +51,55 @@ nav ul li a h6{
     margin-bottom: 0rem!important;
     font-weight: 700;
 }
+#myBtn {
+    display: none; 
+
+
+}
+
+
+
    @media (max-width: 768px) {
   
     nav ul li a h6{
         display: none;
     }
     
+  }
+  @media (max-width: 768px) {
+  
+    #myBtn {
+        display: none; 
+        position: fixed; 
+        width: 100%;
+        bottom: 0px; 
+        z-index: 99;
+        border: none; 
+        outline: none; 
+        background-color: rgb(255, 255, 255); 
+        padding: 2%; 
+        background: rgb(252,70,107);
+        background: linear-gradient(90deg, rgba(252,70,107,1) 0%, rgba(63,94,251,1) 53%, rgba(39,40,42,1) 95%);
+    
+    }
+
+    .mobile{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .logoMobile{
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        border-radius: 100%;
+        padding: 5%;
+    }
+    .mobile li svg{
+    fill: white;
+    transition: all ease .5s;
+    }
+    .mobile li svg:hover{
+        fill: rgb(0, 0, 0);
+        }
   }

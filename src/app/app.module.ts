@@ -11,6 +11,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormComponent } from './form/form.component';
 import { EditComponent } from './edit/edit.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { ListadoLocalComponent } from './listado-local/listado-local.component';
+import { DetailsLocalComponent } from './details-local/details-local.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { NgxPaginationModule } from 'ngx-pagination';
     MenuComponent,
     DetailsComponent,
     FormComponent,
-    EditComponent
+    EditComponent,
+    ListadoLocalComponent,
+    DetailsLocalComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,10 @@
+@import url(../phones/phones.component.css);
+section{
+    padding: 3%;
+}
+@media (max-width: 768px) {
+    section{
+        padding: 10%;
+    }
+    
+  }
