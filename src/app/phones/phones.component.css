@@ -35,7 +35,9 @@ box-shadow: 10px 10px 80px 1px #cecdcd;
     font-size: 1.3em;
     text-align: right;
 }
-
+.product{
+    padding: 5%;
+}
 .control{
     width:60%;
     text-align: center;

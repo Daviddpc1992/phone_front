@@ -1,13 +1,14 @@
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-4" *ngFor="let phone of Arrayphones | paginate: { itemsPerPage: 6, currentPage: pageActual }">
+            <div class="col-12 col-md-6 col-lg-4 " *ngFor="let phone of Arrayphones | paginate: { itemsPerPage: 6, currentPage: pageActual }">
+                <div *ngIf="Edit === true"></div>
                     <button class="btn eliminar" (click)="DeleteProducto(phone)">
                       Quita tu favorito
                     </button>                
-                <div class="text-left product" (click)="goToDetails(phone)">
+                <div class="text-left cardPhone" (click)="goToDetails(phone)">
                     <img class="card-img-top"
-                    [src]="phone.I"
+                    [src]="phone.imageFile"
                     [alt]="phone.name" [title]="phone.name">
                     <div class="card-body">
                         <div class="circle_color" [title]="phone.color" [ngStyle]="{ backgroundColor: phone.color }"></div>

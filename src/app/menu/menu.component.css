@@ -52,9 +52,11 @@ nav ul li a h6{
     font-weight: 700;
 }
 #myBtn {
-    display: none!important; 
+    display: none
 }
-
+.mobile{
+    display: none 
+}
 
 
    @media (max-width: 768px) {
@@ -65,9 +67,10 @@ nav ul li a h6{
     
   }
   @media (max-width: 768px) {
-  
+      
+      
     #myBtn {
-        display: block!important; 
+        display: block; 
         position: fixed; 
         width: 100%;
         bottom: 0px; 
@@ -78,9 +81,15 @@ nav ul li a h6{
         padding: 2%; 
         background: rgb(252,70,107);
         background: linear-gradient(90deg, rgba(252,70,107,1) 0%, rgba(63,94,251,1) 53%, rgba(39,40,42,1) 95%);
-    
+        
     }
 
+    .mobile{
+        display: block 
+    }
+    .mobile{
+        display: block 
+    }
     .mobile{
         display: flex;
         align-items: center;

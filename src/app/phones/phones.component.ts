@@ -14,6 +14,7 @@ export class PhonesComponent implements OnInit {
   Arrayphones: Phone[] = [];
   phone
   pageActual: number = 1;
+  Edit: boolean = false;
 
   constructor(private service: ServiceService, private router: Router,
     private activatedRouter: ActivatedRoute) {

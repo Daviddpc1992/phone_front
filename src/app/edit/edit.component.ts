@@ -23,7 +23,6 @@ export class EditComponent implements OnInit {
     let sub = this.activateRoute.params.subscribe(async (params: Params) => {
       let Id = params['id'];
       this.phone = await this.service.getByIdPhone(Id);
-console.log(this.phone)
       this.formulario = new FormGroup({
         name: new FormControl(this.phone[0].name, []),
         manufacturer: new FormControl(this.phone[0].manufacturer, []),
@@ -33,7 +32,7 @@ console.log(this.phone)
         screen: new FormControl(this.phone[0].screen, []),
         processor: new FormControl(this.phone[0].processor, []),
         ram: new FormControl(this.phone[0].ram, []),
-        imageFile: new FormControl('', []),
+        imageFile: new FormControl(this.phone[0].imageFile, []),
       });
     })
   }
@@ -47,8 +46,9 @@ console.log(this.phone)
     fd.append('screen', this.formulario.value.screen);
     fd.append('processor', this.formulario.value.processor);
     fd.append('ram', this.formulario.value.ram);
-    fd.append('imageFile', this.files);
+    fd.append('imageFile', this.formulario.value.imageFile);
     const response = await this.service.update(this.phone[0].id, fd);
+    console.log(this.phone[0].id, fd)
     if (response['affectedRows'] === 1) {
       this.router.navigate(['/']);
     }

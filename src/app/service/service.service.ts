@@ -25,7 +25,7 @@ export class ServiceService {
     return this.httpClient.post<Phone>(`${this.baseUrl}/phone`, newPhone).toPromise();
   }
 
-  update(id:number, fd) {
+  update(id:number, fd: FormData) {
     return this.httpClient.put(`${this.baseUrl}/phone/${id}`, fd).toPromise();
   }
   delete(id:number) {

@@ -4,17 +4,16 @@
             <div class="row">
                 <div class="card-body">
                     <div class="col-12 col-md-6 ">
-                        <a [routerLink]="['../']" class="back">
+                        <a [routerLink]="['/']" class="back">
                             <img class="back-arrow" src="https://img.icons8.com/ios/50/000000/long-arrow-left.png" />
                             <h5>Back</h5>
                         </a>
                     </div>
                 </div>
                 <div class="col-10 col-md-5 ">
-                    <a href="https://thumb.pccomponentes.com/w-530-530/articles/34/348250/1127-apple-iphone-xr-128-gb-negro-libre.jpg"
+                    <a [href]="phone.imageFile"
                         data-fancybox="gallery" [data-caption]="phone.name">
-                        <img width="100%"
-                            src="https://thumb.pccomponentes.com/w-530-530/articles/34/348250/1127-apple-iphone-xr-128-gb-negro-libre.jpg"
+                        <img width="100%" [src]="phone.imageFile"
                             alt="{{phone.name}}">
                     </a>
                 </div>
@@ -58,6 +57,5 @@
                 <h5 style="cursor: pointer;" (click)="goToEdit(phone)">Edit phone</h5>
             </div>
         </div>
-
 
     </div>

@@ -29,9 +29,9 @@ export class FormComponent implements OnInit {
       ]),
       price: new FormControl('', [
       ]),
-      imageFileName: new FormControl(),
+      imageFile: new FormControl('', [
+      ]),
       screen: new FormControl('', [
-    
       ]),
       processor: new FormControl('', [
       ]),
