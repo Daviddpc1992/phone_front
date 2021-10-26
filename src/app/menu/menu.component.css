@@ -52,9 +52,7 @@ nav ul li a h6{
     font-weight: 700;
 }
 #myBtn {
-    display: none; 
-
-
+    display: none!important; 
 }
 
 
@@ -69,7 +67,7 @@ nav ul li a h6{
   @media (max-width: 768px) {
   
     #myBtn {
-        display: none; 
+        display: block!important; 
         position: fixed; 
         width: 100%;
         bottom: 0px; 

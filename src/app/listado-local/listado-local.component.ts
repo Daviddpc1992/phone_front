@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Phone } from '../interface/phone';
 import { ServiceService } from '../service/service.service';
-
+declare var Swal;
 @Component({
   selector: 'app-listado-local',
   templateUrl: './listado-local.component.html',
@@ -37,5 +37,28 @@ export class ListadoLocalComponent implements OnInit {
       return `white`
     }
   }
+  DeleteProducto(phone): void {
 
+    console.log(phone)
+    const pId = this.service.delete(phone.id)
+      .then((response) => {
+        console.log(response)
+        if (response['error']) {
+          console.log('error')
+        }
+        else {
+          console.log(pId)
+          Swal.fire({
+            title: '¡Ups!...',
+            text: 'Phone Deleted',
+            imageWidth: 400,
+            imageHeight: 200,
+       
+          })
+          this.service.getAlllocal();
+      
+        }
+      })
+
+  }
 }

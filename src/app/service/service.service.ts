@@ -10,7 +10,7 @@ export class ServiceService {
   baseUrl: string;
 
   constructor( private httpClient: HttpClient) {
-    this.baseUrl = 'https://phonesback.herokuapp.com';
+    this.baseUrl = 'http://localhost:3000/api';
   }
 
   getAll():Promise<Phone[]>{
@@ -28,8 +28,13 @@ export class ServiceService {
   update(id:number, fd) {
     return this.httpClient.put(`${this.baseUrl}/phone/${id}`, fd).toPromise();
   }
+  delete(id:number) {
+    return this.httpClient.delete(`${this.baseUrl}/phone/delete/${id}`).toPromise();
+  }
 
-  
+
+
+  // Local 
   getAlllocal(): Phone[] {
     return PHONE;
  }

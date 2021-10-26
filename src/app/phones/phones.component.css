@@ -42,6 +42,11 @@ box-shadow: 10px 10px 80px 1px #cecdcd;
     margin: 5% auto;
 }
 
+.btn-check:focus + .btn, .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 .0rem rgba(13, 109, 253, 0)!important;
+}
+
 @media (max-width: 768px) {
   
     section{
